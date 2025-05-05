@@ -1,0 +1,36 @@
+[package]
+name = "bevy_dae"
+version = "0.1.0"
+authors = ["Goutham S Krishna <goutham@yudurobotics.xom>"]
+edition = "2024"
+license = "MIT"
+description = "A Bevy plugin for loading and rendering DAE (Collada) files."
+
+[dependencies]
+bevy ={version = "0.15", default-features = false, features = [
+    "bevy_asset",
+    "bevy_render",
+] }
+thiserror = "2.0"
+collada = "0.15.0"
+
+[dev-dependencies]
+bevy = { version = "0.15", default-features = false, features = [
+    "bevy_asset",
+    "bevy_core_pipeline",
+    "bevy_pbr",
+    "bevy_winit",
+    "bevy_window",
+    "tonemapping_luts",
+    "x11",
+] }
+
+[features]
+default = ["wireframe"]
+
+wireframe = []
+
+[[example]]
+name = "joint"
+path = "examples/joint.rs"
+required-features = ["wireframe"]

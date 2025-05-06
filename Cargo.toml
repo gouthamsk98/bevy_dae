@@ -7,15 +7,16 @@ license = "MIT"
 description = "A Bevy plugin for loading and rendering DAE (Collada) files."
 
 [dependencies]
-bevy ={version = "0.15", default-features = false, features = [
+bevy ={version = "0.16.0", default-features = false, features = [
     "bevy_asset",
     "bevy_render",
 ] }
 thiserror = "2.0"
 collada = "0.15.0"
+mesh-loader = { version = "0.1.13", features = ["collada"] }
 
 [dev-dependencies]
-bevy = { version = "0.15", default-features = false, features = [
+bevy = { version = "0.16", default-features = false, features = [
     "bevy_asset",
     "bevy_core_pipeline",
     "bevy_pbr",

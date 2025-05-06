@@ -3,8 +3,7 @@ use bevy::prelude::*;
 use bevy::render::mesh::{ Indices, Mesh };
 use bevy::render::render_resource::PrimitiveTopology;
 use mesh_loader::Scene;
-use std::io::Cursor;
-use bevy::{ asset::{ io::Reader, AssetLoader, LoadContext }, prelude::* };
+use bevy::asset::{ io::Reader, AssetLoader, LoadContext };
 use thiserror::Error;
 
 #[derive(Error, Debug)]
